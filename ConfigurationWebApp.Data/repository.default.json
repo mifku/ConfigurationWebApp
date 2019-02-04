@@ -1,0 +1,37 @@
+{
+  "sharpRepository": {
+    "repositories": {
+      "default": "repositoryName"
+
+      // add repositories here
+
+    },
+    "cachingProviders": {
+      "default": "noCachingProvider",
+
+      //add other providers here
+
+      "noCachingProvider": {
+        "factory":
+          "SharpRepository.Repository.Caching.NoCachingConfigCachingProviderFactory, SharpRepository.Repository"
+      }
+    },
+    "cachingStrategies": {
+      "default": "none",
+      "standard": {
+        "factory":
+          "SharpRepository.Repository.Caching.StandardConfigCachingStrategyFactory, SharpRepository.Repository",
+        "generational": "true",
+        "writeThrough": "false"
+      },
+      "timeout": {
+        "factory": "SharpRepository.Repository.Caching.TimeoutConfigCachingStrategyFactory, SharpRepository.Repository",
+        "timeout": "200"
+      },
+      "none": {
+        "factory":
+          "SharpRepository.Repository.Caching.NoCachingConfigCachingStrategyFactory, SharpRepository.Repository"
+      }
+    }
+  }
+}

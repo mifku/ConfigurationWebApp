@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.7.3" />
+    <PackageReference Include="SharpRepository.Ioc.Autofac" Version="1.5.0.2" />
+    <PackageReference Include="SharpRepository.MongoDbRepository" Version="2.0.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigurationWebApp.Common\ConfigurationWebApp.Common.csproj" />
+  </ItemGroup>
+
+</Project>
